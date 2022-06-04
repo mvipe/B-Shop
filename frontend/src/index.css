@@ -5,3 +5,7 @@ main{
 .rating span{
     margin: 5 rem;
 }
+
+.header-container{
+    background-color: #6A1B4D;
+}
