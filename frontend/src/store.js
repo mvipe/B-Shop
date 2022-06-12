@@ -6,7 +6,7 @@ import {composeWithDevTools} from 'redux-devtools-extension'
 import productListReducers from './reducers/productReducers'
 
 const reducer=combineReducers({
-    productListReducers:productListReducers
+    productList:productListReducers
 })
 const initialState={}
 

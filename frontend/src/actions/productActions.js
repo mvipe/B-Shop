@@ -4,7 +4,7 @@ import {
 
 import axios from "axios"
 
-const listProduct=()=> async(dispatch)=>{
+export const listProducts=()=> async(dispatch)=>{
     const url="/api/products/";
     try{
         dispatch({type:PRODUCT_LIST_REQUEST})
