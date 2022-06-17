@@ -18,7 +18,7 @@ function Header() {
         className="mr-auto"
       
       >
-         <LinkContainer to="/">
+         <LinkContainer to="/cart">
          <Nav.Link ><i className='fas fa-shopping-cart'></i>Cart</Nav.Link>
          </LinkContainer>
 
