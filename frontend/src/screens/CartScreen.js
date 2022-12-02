@@ -12,7 +12,7 @@ import {
   FormControl,
 } from "react-bootstrap";
 
-import { addToCart } from "../actions/cartActions";
+import { addToCart,removeToCart } from "../actions/cartActions";
 import Message from "../components/Message";
 
 import { useParams, useLocation, useNavigate } from "react-router";
@@ -36,7 +36,7 @@ function CartScreen() {
   }, [dispatch, id, qty]);
 
   const removeFromCartHandler=(id)=>{
-
+      dispatch(removeToCart(id))
   }
 
   const checkoutHandler =()=>{
