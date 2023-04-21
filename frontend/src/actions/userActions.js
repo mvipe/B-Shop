@@ -15,13 +15,13 @@ export const login = (email, password) => async (dispatch) => {
 
     const config = {
       headers: {
-        "Content-type": "aplication/json",
-      },
+        'Content-type': 'application/json',
+      }
     };
 
     const { data } = await axios.post(
       "/api/users/login/",
-      { username: email, password: password },
+      { 'username': email, 'password': password },
       config
     );
 
@@ -36,8 +36,8 @@ export const login = (email, password) => async (dispatch) => {
       type: USER_LOGIN_FAIL,
       payload:
         error.response && error.response.data.detail
-          ? error.response.data.message
-          : error.detail,
+          ? error.response.data.detail
+          : error.message,
     });
   }
 };
