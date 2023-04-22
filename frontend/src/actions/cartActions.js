@@ -3,7 +3,7 @@ import axios from 'axios';
 import { HashRouter } from "react-router-dom";
 
 export const addToCart = (id,qty) => async (dispatch,getState)=>{
-    const {data}=await axios.get(`/api/product/${id}`)
+    const {data}=await axios.get(`/api/products/${id}`)
     
 
     dispatch({
@@ -29,5 +29,5 @@ export const removeToCart = (id) => (dispatch,getState) => {
         payload: id
     })
 
-    localStorage.setItem('cartItems',JSON.stringify(getState().cart.cartItems))
+    localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems))
 }
